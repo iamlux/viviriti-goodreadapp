@@ -1,33 +1,233 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+  box-sizing: border-box;
+}
+
+body, input, button {
+  font-family: 'Muli', sans-serif;
+}
+
+body {
+  background: #1abc9c;
+}
+
+#app {
+  max-width: 100%;
+  width: 90%;
+  margin: 2em auto;
+  background: white;
+  padding: 1em;
+}
+
+h1 {
+  color: #1abc9c;
+}
+
+header {
+  text-align: center;
+  padding: 25px;
+}
+
+header img {
+  display: inline-block;
+  height: 100px;
+}
+
+input, button {
+  padding: 0.5em;
+  margin: 2px;
+  display: inline-block;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
+}
+
+input, button, div#app {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  border: 2px solid #16a085;
+}
+
+button {
+  background: #16a085;
+  color: #fff;
+  border: none;
+  padding: 0.7em;
+}
+
+button:last-of-type {
+  margin-right: 0;
+}
+
+td:first-of-type {
+  width: 100%;
+}
+
+th:last-of-type,
+td:last-of-type {
+  text-align: right;
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 0;
+}
+
+table {
+  width: 100%;
+}
+
+p.tutorial {
+  padding: 10px;
+  color: #222;
+  background: #ecf0f1;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form.create-todo-form {
+  border-bottom: 1px solid #ecf0f1;
+  padding: 1em 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+form.create-todo-form input {
+  width: calc(100% - 50px);
+}
+
+tr.todo-not-completed td:first-of-type {
+  color: #1abc9c;
+}
+
+tr.todo-completed td:first-of-type {
+  color: #787878;
+  text-decoration: line-through;
+}
+
+tr>td:first-of-type {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
+
+tr>td:first-of-type {
+  width: calc(100% - 0px) !important;
+}
+
+tr>td>form>input {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  margin: 0 57px;
+}
+
+.form-control {
+  flex: 6;
+}
+
+.btn.btn-primary {
+  flex: 1;
+}
+
+.delete-btn, .cancel-btn {
+  background-color: #e74c3c;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.list-unstyled {
+  display: flex;
+  list-style: none;
+}
+
+.list-unstyled li {
+  /* Add shadows to create the "card" effect */
+  margin: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 150px;
+  width: 30%;
+  max-width: 30%;
+}
+
+.list-unstyled li img {
+  height: 100px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.list-unstyled li:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.media-body {
+  float: right;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  margin: 1em;
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+  padding: 10px;
+  flex: 1;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
+
+.card a {
+  color: black;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+figure.thumbnail {
+  text-align: center;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-weight: normal;
+}
+
+.card-content p {
+  font-size: 95%;
+}
+
+ul.pagination {
+  display: flex;
+  list-style: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li.page-item {
+  color: #fff;
+  padding: 10px 20px;
+  background: #1abc9c;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading {
+  text-align: center;
 }
